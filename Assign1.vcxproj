@@ -180,17 +180,17 @@
     <PostBuildEvent />
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="ParticleGen.cpp" />
-    <ClCompile Include="SimpleParticle.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\ofApp.cpp" />
+    <ClCompile Include="src\ParticleGen.cpp" />
+    <ClCompile Include="src\SimpleParticle.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Particle.h" />
-    <ClInclude Include="ParticleGen.h" />
-    <ClInclude Include="ParticleSystem.h" />
-    <ClInclude Include="SimpleParticle.h" />
     <ClInclude Include="src\ofApp.h" />
+    <ClInclude Include="src\Particle.h" />
+    <ClInclude Include="src\ParticleGen.h" />
+    <ClInclude Include="src\ParticleSystem.h" />
+    <ClInclude Include="src\SimpleParticle.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="$(OF_ROOT)\libs\openFrameworksCompiled\project\vs\openframeworksLib.vcxproj">
@@ -205,8 +205,8 @@
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\..\..\..\CS Stuff\CompGraphAssignment\bin\data\Shaders\ParticleFrag.frag" />
-    <None Include="..\..\..\..\..\CS Stuff\CompGraphAssignment\bin\data\Shaders\ParticleVert.vert" />
+    <None Include="bin\data\Shaders\ParticleFrag.frag" />
+    <None Include="bin\data\Shaders\ParticleVert.vert" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ProjectExtensions>

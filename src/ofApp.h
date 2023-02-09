@@ -1,7 +1,8 @@
 #pragma once
 
 #include "ofMain.h"
-
+#include "ParticleGen.h"
+#include "ParticleSystem.h"
 class ofApp : public ofBaseApp{
 
 	public:
@@ -25,4 +26,7 @@ class ofApp : public ofBaseApp{
 		ofMesh partMesh;
 		ofShader shader;
 		ofImage img;
+
+		ParticleGen particleGenerator{};
+		ParticleSystem<SimpleParticle> particleSystem{ particleGenerator, 1, 20.0f };
 };

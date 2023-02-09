@@ -3,8 +3,8 @@
   <ItemGroup>
     <ClCompile Include="src\ofApp.cpp" />
     <ClCompile Include="src\main.cpp" />
-    <ClCompile Include="SimpleParticle.cpp" />
-    <ClCompile Include="ParticleGen.cpp" />
+    <ClCompile Include="src\SimpleParticle.cpp" />
+    <ClCompile Include="src\ParticleGen.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -18,17 +18,17 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ParticleSystem.h" />
     <ClInclude Include="src\ofApp.h" />
-    <ClInclude Include="Particle.h" />
-    <ClInclude Include="SimpleParticle.h" />
-    <ClInclude Include="ParticleGen.h" />
+    <ClInclude Include="src\ParticleGen.h" />
+    <ClInclude Include="src\ParticleSystem.h" />
+    <ClInclude Include="src\SimpleParticle.h" />
+    <ClInclude Include="src\Particle.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="icon.rc" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\..\..\..\CS Stuff\CompGraphAssignment\bin\data\Shaders\ParticleFrag.frag" />
-    <None Include="..\..\..\..\..\CS Stuff\CompGraphAssignment\bin\data\Shaders\ParticleVert.vert" />
+    <None Include="bin\data\Shaders\ParticleFrag.frag" />
+    <None Include="bin\data\Shaders\ParticleVert.vert" />
   </ItemGroup>
 </Project>

@@ -26,22 +26,32 @@ void ofApp::setup()
 
 	shader.load("Shaders/ParticleVert.vert", "Shaders/ParticleFrag.frag");
 	img.load("textures/star_01.png");
+
+	
 }
 
 //--------------------------------------------------------------
 void ofApp::update()
 {
-	
+	particleSystem.update(ofGetLastFrameTime());
 }
 
 //--------------------------------------------------------------
 void ofApp::draw()
 {
-	//for (SimpleParticle p : )
-	/*shader.begin();
-	shader.setUniformTexture("particleTex", img, 0);
-	partMesh.draw();
-	shader.end();*/
+	shader.begin();
+	//template given by intro vid
+	for (const SimpleParticle& p : particleSystem)
+	{
+		shader.setUniformTexture("particleTex", img, 0);
+		if (p.getLife() > 0) {
+			partMesh.draw();
+		}
+		//partMesh.draw();
+	}
+	shader.end();
+	//shader.setUniformTexture("particleTex", img, 0);
+	
 }
 
 //--------------------------------------------------------------
