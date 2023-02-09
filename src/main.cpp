@@ -8,6 +8,7 @@ int main( ){
 	glSettings.windowMode = OF_WINDOW;
 	glSettings.setGLVersion(4, 1);
 	ofCreateWindow(glSettings);
-	ofRunApp(new ofApp());
-
+	printf("%s\n", glGetString(GL_VERSION));
+	ofRunApp(new ofApp()); 
+	
 }

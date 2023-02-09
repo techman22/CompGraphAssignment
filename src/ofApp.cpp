@@ -1,18 +1,47 @@
 #include "ofApp.h"
 
 //--------------------------------------------------------------
-void ofApp::setup(){
+void ofApp::setup()
+{
+	using namespace glm;
+	ofDisableArbTex();
 
+	partMesh.addVertex(vec3(-1, -1, 0));
+	partMesh.addVertex(vec3(-1, 1, 0));
+	partMesh.addVertex(vec3(1, 1, 0));
+	partMesh.addVertex(vec3(1, -1, 0));
+
+	partMesh.addTexCoord(vec2(0, 0));
+	partMesh.addTexCoord(vec2(0, 1));
+	partMesh.addTexCoord(vec2(1, 1));
+	partMesh.addTexCoord(vec2(1, 0));
+
+	partMesh.addColor(ofDefaultColorType(1, 0, 0, 1));
+	partMesh.addColor(ofDefaultColorType(0, 1, 0, 1));
+	partMesh.addColor(ofDefaultColorType(0, 0, 1, 1));
+	partMesh.addColor(ofDefaultColorType(1, 1, 1, 1));
+
+	ofIndexType indices[6] = { 0, 1, 2, 2, 3, 0 };
+	partMesh.addIndices(indices, 6);
+
+	shader.load("Shaders/ParticleVert.vert", "Shaders/ParticleFrag.frag");
+	img.load("textures/star_01.png");
 }
 
 //--------------------------------------------------------------
-void ofApp::update(){
-
+void ofApp::update()
+{
+	
 }
 
 //--------------------------------------------------------------
-void ofApp::draw(){
-
+void ofApp::draw()
+{
+	//for (SimpleParticle p : )
+	/*shader.begin();
+	shader.setUniformTexture("particleTex", img, 0);
+	partMesh.draw();
+	shader.end();*/
 }
 
 //--------------------------------------------------------------
