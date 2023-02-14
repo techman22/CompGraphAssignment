@@ -24,9 +24,18 @@ class ofApp : public ofBaseApp{
 		
 	private:
 		ofMesh partMesh;
+		ofMesh quad;
 		ofShader shader;
+		ofShader quadShader;
 		ofImage img;
+		ofImage img2;
+		ofImage img3;
+		ofImage cometImg;
+		ofImage cometImg2;
+		ofImage cometImg3;
+		ofImage cometImg4;
+		ofImage cometImg5;
 
 		ParticleGen particleGenerator{};
-		ParticleSystem<SimpleParticle> particleSystem{ particleGenerator, 1, 20.0f };
+		ParticleSystem<SimpleParticle> particleSystem{ particleGenerator, 30, 20.0f };
 };

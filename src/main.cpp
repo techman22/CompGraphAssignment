@@ -3,6 +3,7 @@
 
 //========================================================================
 int main( ){
+    srand(time(NULL));
 	ofGLWindowSettings glSettings;
 	glSettings.setSize(1024, 768);
 	glSettings.windowMode = OF_WINDOW;

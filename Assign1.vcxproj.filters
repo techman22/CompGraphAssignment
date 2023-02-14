@@ -30,5 +30,7 @@
   <ItemGroup>
     <None Include="bin\data\Shaders\ParticleFrag.frag" />
     <None Include="bin\data\Shaders\ParticleVert.vert" />
+    <None Include="BackgroundFrag.frag" />
+    <None Include="BackgroundVert.vert" />
   </ItemGroup>
 </Project>

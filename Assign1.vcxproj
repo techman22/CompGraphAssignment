@@ -205,6 +205,8 @@
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="BackgroundFrag.frag" />
+    <None Include="BackgroundVert.vert" />
     <None Include="bin\data\Shaders\ParticleFrag.frag" />
     <None Include="bin\data\Shaders\ParticleVert.vert" />
   </ItemGroup>
